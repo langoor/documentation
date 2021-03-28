@@ -35,7 +35,7 @@
   width: 100vh;
   height: 10px;
   margin-top: 10px;
-  background: #f3ca20;
+  background: rebeccapurple;
   border-radius: 25px;
 }
 
@@ -43,6 +43,7 @@
   background: #191919;
   height: 100px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: Tahoma;
@@ -59,6 +60,28 @@
   align-items: center;
   font-family: Tahoma;
   font-weight: 1000;
+}
+
+.badges {
+  background: #f3ca20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.ending {
+  background: #191919;
+  height: 100px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Tahoma;
+  font-weight: 800;
+  font-size: large;
+  color: whitesmoke;
 }
 
 .installation {
@@ -110,6 +133,33 @@
 }
 
 .cli-usage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.config-usage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.config-description {
+  background: #f3ca20;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 5px;
+  margin-top: 10px;
+  align-items: center;
+  font-family: Tahoma;
+  font-weight: 1000;
+}
+
+.custom-tests-usage {
   display: flex;
   flex-direction: column;
   justify-content: center;

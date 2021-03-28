@@ -19,6 +19,9 @@
         <div class="description">
             <h2>The 21st century javascript unit testing framework.</h2>
         </div>
+        <div class="badges">
+            <img src="https://nodei.co/npm/langoor.png" alt="" srcset="">
+        </div>
 
         <div class="features">
             <div class="headings">
@@ -60,8 +63,14 @@
                 <h1>File Usage</h1>
             </div>
             <div class="code javascript">
+                <p>// PASS</p>
                 <p>test("should give 2 + 2 = 4", (assert) => {</p>
                 <p>&emsp;&emsp;assert.equal(2 + 2, 4);</p>
+                <p>});</p>
+                <p><br /></p>
+                <p>// FAIL</p>
+                <p>test("should give 2/2 = 1", (assert) => {</p>
+                <p>&emsp;&emsp;assert.equal(2/1, 1);</p>
                 <p>});</p>
             </div>
             <div class="break"></div>
@@ -78,6 +87,39 @@
                 <p>langoor [file_path]</p>
             </div>
             <div class="break"></div>
+        </div>
+
+        <div class="config-usage">
+            <div class="headings">
+                <h1>Config</h1>
+            </div>
+            <div class="config-description">
+                <h3>All configurations are held in a file named 'langoor.config.js'.</h3>
+            </div>
+            <div class="code javascript">
+                <p>module.exports = {</p>
+                <p>&emsp;&emsp;additional: ["tests/3.js"], // Additional Files to add to the default ".test.js" files.</p>
+                <p>&emsp;&emsp;ignore: [], // Ignored files and folder.</p>
+                <p>};</p>
+            </div>
+            <div class="break"></div>
+        </div>
+
+        <div class="custom-tests-usage">
+            <div class="headings">
+                <h1>Custom Tests</h1>
+            </div>
+            <div class="code javascript">
+                <p>test("a should not be undefined", () => {</p>
+                <p>&emsp;&emsp;var a = undefined;</p>
+                <p>&emsp;&emsp;if (a === undefined) throw new Error("a is undefined!!");</p>
+                <p>});</p>
+            </div>
+        </div>
+
+        <div class="ending">
+            <h1>Thank you for download Langoor.</h1>
+            <h4>Made with ❤️ by squik</h4>
         </div>
     </div>
     <script>
