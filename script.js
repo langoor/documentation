@@ -1,4 +1,4 @@
-const { render } = new Remarkable();
+const converter = new Remarkable();
 const md = `
 # 🐒 **Langoor**
 
@@ -77,4 +77,4 @@ test("should log 'LANGOOR'", () => {
 
 `;
 
-document.getElementById("app").innerHTML = render(md);
+document.getElementById("app").innerHTML = converter.render(md);
