@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+.code {
+  background: aliceblue;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 10px;
+  font-size: x-large;
+  font-family: monospace;
+}
+
+.headings {
+  background: #191919;
+  border-radius: 10px;
+  height: 50px;
+  padding: 10px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Tahoma;
+  font-weight: 1000;
+  color: whitesmoke;
+}
+
+.break {
+  width: 100vh;
+  height: 10px;
+  margin-top: 10px;
+  background: #f3ca20;
+  border-radius: 25px;
+}
+
+.header {
+  background: #191919;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Tahoma;
+  font-weight: 1000;
+  font-size: x-large;
+  color: whitesmoke;
+}
+
+.description {
+  background: #f3ca20;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Tahoma;
+  font-weight: 1000;
+}
+
+.installation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.file-usage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.features-features {
+  background: #f3ca20;
+  display: flex;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  font-family: Tahoma;
+  font-weight: 700;
+  font-size: large;
+}
+
+.demo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.demo-img {
+  border-radius: 25px;
+  margin-top: 10px;
+  border: #f3ca20 solid 10px;
+  width: 700px;
+}
+
+.cli-usage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
