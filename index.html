@@ -14,7 +14,10 @@
 <body>
     <div id="app">
         <div class="header">
-            <h1>🐒 Langoor</h1>
+            <h1 class="header-logo">🐒 Langoor</h1>
+            <button id="toggle-theme-btn" onclick="themeChange()">
+                🌞
+            </button>
         </div>
         <div class="description">
             <h2>The 21st century javascript unit testing framework.</h2>
@@ -139,5 +142,6 @@
             hljs.highlightBlock(block);
         });
     </script>
+    <script src="script.js"></script>
 </body>
 </html>
