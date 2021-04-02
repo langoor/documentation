@@ -1,33 +1,53 @@
-let dark = false;
-let codeBlocks = document.querySelectorAll("div.code");
-let headingBlocks = document.querySelectorAll("div.headings");
-let toggleButton = document.getElementById("toggle-theme-btn");
+let selectedButtonColor = "#383838";
+let __HTML__ = {};
 
-function themeChange() {
-  if (dark) {
-    document.body.style.background = "white";
-    codeBlocks.forEach((block) => {
-      block.style.background = "aliceblue";
-      block.style.color = "#191919";
-    });
-    headingBlocks.forEach((block) => {
-      block.style.background = "#191919";
-      block.style.color = "aliceblue";
-    });
-    toggleButton.innerText = "🌞";
-    toggleButton.style.background = "white";
-  } else {
-    document.body.style.background = "black";
-    codeBlocks.forEach((block) => {
-      block.style.background = "#282424";
-      block.style.color = "aliceblue";
-    });
-    headingBlocks.forEach((block) => {
-      block.style.background = "aliceblue";
-      block.style.color = "#191919";
-    });
-    toggleButton.innerText = "🌙";
-    toggleButton.style.background = "#282424";
-  }
-  dark = !dark;
+window.addEventListener("load", () => {
+  changeRoute("introduction");
+  document.getElementById("introduction").style.color = "#39ff14";
+  highlight();
+});
+
+function hover(button) {
+  button.style.background = selectedButtonColor;
 }
+
+function hoverEnd(button) {
+  button.style.background = "#191919";
+}
+
+function changeRoute(route) {
+  document.getElementById("app").innerHTML = __HTML__[route];
+  highlight();
+}
+
+function highlight() {
+  document.querySelectorAll("div.code").forEach((block) => {
+    hljs.highlightBlock(block);
+  });
+}
+
+function changeSelectedButton({ id }) {
+  changeRoute(id);
+  document.querySelectorAll("button.classic-button").forEach((button) => {
+    if (button.id === id) {
+      button.style.color = "lightgreen";
+    } else {
+      button.style.background = "#191919";
+      button.style.color = "white";
+    }
+  });
+}
+
+document.querySelectorAll("button.classic-button").forEach((button) => {
+  button.addEventListener("mouseover", function () {
+    hover(button);
+  });
+
+  button.addEventListener("mouseout", () => {
+    hoverEnd(button);
+  });
+
+  button.addEventListener("click", () => {
+    changeSelectedButton(button);
+  });
+});

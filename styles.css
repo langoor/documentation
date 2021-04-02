@@ -3,44 +3,45 @@
   padding: 0;
 }
 
-.app {
+.actual-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.button-list {
   display: flex;
   flex-direction: column;
-}
-
-.code {
-  background: aliceblue;
-  border-radius: 5px;
-  padding: 5px;
-  margin-top: 10px;
-  font-size: x-large;
-  font-family: monospace;
-}
-
-.headings {
   background: #191919;
-  border-radius: 10px;
-  height: 50px;
   padding: 10px;
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: Tahoma;
-  font-weight: 1000;
-  color: whitesmoke;
+  padding-top: 10px;
 }
 
-.break {
-  width: 100vh;
-  height: 10px;
-  margin-top: 10px;
-  background: rebeccapurple;
-  border-radius: 25px;
-}
-
-.header {
+.button-list > button {
+  outline: none;
+  border: none;
   background: #191919;
+  border-radius: 5px;
+  height: 40px;
+  width: 150px;
+  color: white;
+  font-size: large;
+  font-weight: 600;
+  margin-left: 30px;
+  margin-right: 30px;
+  font-family: Tahoma;
+}
+
+.app {
+  background: #191919;
+  color: white;
+  font-family: Tahoma;
+  padding: 30px;
+  flex-grow: 1;
+  font-size: large;
+}
+
+/* .header {
+  background: #36454f;
   height: 100px;
   display: flex;
   flex-direction: row;
@@ -50,140 +51,52 @@
   font-weight: 1000;
   font-size: x-large;
   color: whitesmoke;
+} */
+
+.header {
+  background: lightgreen;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-#toggle-theme-btn {
-  position: absolute;
-  left: 85%;
-  height: 45px;
-  width: 100px;
-  border-radius: 10px;
-  outline: none;
+.header > img {
+  height: 90px;
+}
+
+.header > h1 {
   font-family: Tahoma;
-  font-weight: 1000;
-  font-size: x-large;
-  border: #f3ca20 solid 4px;
-}
-
-.description {
-  background: #f3ca20;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: Tahoma;
-  font-weight: 1000;
-}
-
-.badges {
-  background: #f3ca20;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 10px;
-}
-
-.ending {
-  background: #191919;
-  height: 100px;
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: Tahoma;
-  font-weight: 800;
-  font-size: large;
-  color: whitesmoke;
-}
-
-.installation {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.file-usage {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.features {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.features-features {
-  background: #f3ca20;
-  display: flex;
-  padding: 10px;
-  margin-top: 10px;
-  border-radius: 10px;
-  justify-content: center;
-  align-items: center;
-  font-family: Tahoma;
-  font-weight: 700;
-  font-size: large;
-}
-
-.demo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.demo-img {
-  border-radius: 25px;
-  margin-top: 10px;
+  color: #191919;
   margin-bottom: 10px;
-  /* border: #f3ca20 solid 10px; */
-  width: 700px;
-  box-shadow: #f3ca20 8px 8px 10px;
 }
 
-.cli-usage {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.divider-line {
+  color: lightgray;
+  width: 1px;
+  min-height: 86.7vh;
 }
 
-.config-usage {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.redirect,
+.block {
+  background: gray;
+  padding: 4px;
+  border-radius: 5px;
+  color: whitesmoke;
+  font-weight: 550;
 }
 
-.config-description {
-  background: #f3ca20;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  border-radius: 10px;
+.code {
+  border-radius: 5px;
   padding: 5px;
   margin-top: 10px;
-  align-items: center;
-  font-family: Tahoma;
-  font-weight: 1000;
+  font-size: x-large;
+  font-family: monospace !important;
 }
 
-.custom-tests-usage {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.logging-usage {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.heading-break {
+  height: 2px;
+  background: lightgreen;
+  margin-bottom: 10px;
 }

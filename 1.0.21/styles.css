@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+.code {
+  background: aliceblue;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 10px;
+  font-size: x-large;
+  font-family: monospace;
+}
+
+.headings {
+  background: #191919;
+  border-radius: 10px;
+  height: 50px;
+  padding: 10px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Tahoma;
+  font-weight: 1000;
+  color: whitesmoke;
+}
+
+.break {
+  width: 100vh;
+  height: 10px;
+  margin-top: 10px;
+  background: rebeccapurple;
+  border-radius: 25px;
+}
+
+.header {
+  background: #191919;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: Tahoma;
+  font-weight: 1000;
+  font-size: x-large;
+  color: whitesmoke;
+}
+
+#toggle-theme-btn {
+  position: absolute;
+  left: 85%;
+  height: 45px;
+  width: 100px;
+  border-radius: 10px;
+  outline: none;
+  font-family: Tahoma;
+  font-weight: 1000;
+  font-size: x-large;
+  border: #f3ca20 solid 4px;
+}
+
+.description {
+  background: #f3ca20;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Tahoma;
+  font-weight: 1000;
+}
+
+.badges {
+  background: #f3ca20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.ending {
+  background: #191919;
+  height: 100px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Tahoma;
+  font-weight: 800;
+  font-size: large;
+  color: whitesmoke;
+}
+
+.installation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.file-usage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.features-features {
+  background: #f3ca20;
+  display: flex;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  font-family: Tahoma;
+  font-weight: 700;
+  font-size: large;
+}
+
+.demo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.demo-img {
+  border-radius: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  /* border: #f3ca20 solid 10px; */
+  width: 700px;
+  box-shadow: #f3ca20 8px 8px 10px;
+}
+
+.cli-usage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.config-usage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.config-description {
+  background: #f3ca20;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 5px;
+  margin-top: 10px;
+  align-items: center;
+  font-family: Tahoma;
+  font-weight: 1000;
+}
+
+.custom-tests-usage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logging-usage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

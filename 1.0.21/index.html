@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://i.postimg.cc/nrsMLWKM/langoor-logo-removebg-preview.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet"
+      href="//unpkg.com/@highlightjs/cdn-assets@10.7.1/styles/default.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@10.7.1/highlight.min.js"></script>
+    <title>Langoor</title>
+</head>
+<body>
+    <div id="app">
+        <div class="header">
+            <h1 class="header-logo">🐒 Langoor</h1>
+            <button id="toggle-theme-btn" onclick="themeChange()">
+                🌞
+            </button>
+        </div>
+        <div class="description">
+            <h2>The 21st century javascript unit testing framework.</h2>
+        </div>
+        <div class="badges">
+            <img src="https://nodei.co/npm/langoor.png" alt="" srcset="">
+        </div>
+
+        <div class="features">
+            <div class="headings">
+                <h1>Features</h1>
+            </div>
+            <div class="features-features">
+                <p>
+                🎁 One of the best visual rendering used.<br />
+                🎄 Excellent error rendering.<br />
+                🎀 Automatically searches for files ending with ".test.js" in your root folder.<br />
+                🕸️ Uses the "assert" package to check equality and other features.<br />
+                👍 Config system with ignore and additional files features.
+                </p>
+            </div>
+        </div>
+
+        <div class="demo">
+            <div class="headings">
+                <h1>Demo</h1>
+            </div>
+            <img src="https://i.postimg.cc/85qWYLNS/Langoor-Demo-2.png" alt="Demo" class="demo-img">
+        </div>
+
+        <div class="installation">
+            <div class="headings">
+                <h1>Installation</h1>
+            </div>
+            <div class="code">
+                <p># with npm</p>
+                <p>npm install -g langoor</p>
+                <p># or with yarn</p>
+                <p>yarn add langoor</p>
+            </div>
+            <div class="break"></div>
+        </div>
+
+        <div class="file-usage">
+            <div class="headings">
+                <h1>File Usage</h1>
+            </div>
+            <div class="code javascript">
+                <p>// PASS</p>
+                <p>test("should give 2 + 2 = 4", (assert) => {</p>
+                <p>&emsp;&emsp;assert.equal(2 + 2, 4);</p>
+                <p>});</p>
+                <p><br /></p>
+                <p>// FAIL</p>
+                <p>test("should give 2/2 = 1", (assert) => {</p>
+                <p>&emsp;&emsp;assert.equal(2/1, 1);</p>
+                <p>});</p>
+            </div>
+            <div class="break"></div>
+        </div>
+
+        <div class="cli-usage">
+            <div class="headings">
+                <h1>Command Line Usage</h1>
+            </div>
+            <div class="code bash">
+                <p># finding all files ending with ".test.js"</p>
+                <p>langoor</p>
+                <p># adding additional files to the pre-existing files</p>
+                <p>langoor [file_path]</p>
+            </div>
+            <div class="break"></div>
+        </div>
+
+        <div class="config-usage">
+            <div class="headings">
+                <h1>Config</h1>
+            </div>
+            <div class="config-description">
+                <h3>All configurations are held in a file named 'langoor.config.js'.</h3>
+            </div>
+            <div class="code javascript">
+                <p>module.exports = {</p>
+                <p>&emsp;&emsp;additional: ["tests/3.js"], // Additional Files to add to the default ".test.js" files.</p>
+                <p>&emsp;&emsp;ignore: [], // Ignored files and folder.</p>
+                <p>};</p>
+            </div>
+            <div class="break"></div>
+        </div>
+
+        <div class="custom-tests-usage">
+            <div class="headings">
+                <h1>Custom Tests</h1>
+            </div>
+            <div class="code javascript">
+                <p>test("a should not be undefined", () => {</p>
+                <p>&emsp;&emsp;var a = undefined;</p>
+                <p>&emsp;&emsp;if (a === undefined) throw new Error("a is undefined!!");</p>
+                <p>});</p>
+            </div>
+            <div class="break"></div>
+        </div>
+
+        <div class="logging-usage">
+            <div class="headings">
+                <h1>Langoor Logs</h1>
+            </div>
+            <div class="code javascript">
+                <p>test("logs 'Langoor ROCKZZ!'", () => {</p>
+                <p>&emsp;&emsp;console.langoor('Langoor ROCKZZ!');</p>
+                <p>});</p>
+            </div>
+        </div>
+
+        <div class="ending">
+            <h1>Thank you for downloading Langoor.</h1>
+            <h4>Made with ❤️ by squik</h4>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('div.code').forEach(block => {
+            hljs.highlightBlock(block);
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
