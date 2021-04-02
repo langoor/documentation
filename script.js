@@ -1,40 +1,25 @@
-let selectedButtonColor = "#383838";
-let __HTML__ = {};
+let hoverColor = "#383838";
+let hoverEndColor = "#191919";
 
 window.addEventListener("load", () => {
-  changeRoute("introduction");
-  document.getElementById("introduction").style.color = "#39ff14";
   highlight();
 });
 
 function hover(button) {
-  button.style.background = selectedButtonColor;
+  button.style.background = hoverColor;
 }
 
 function hoverEnd(button) {
-  button.style.background = "#191919";
+  button.style.background = hoverEndColor;
 }
 
-function changeRoute(route) {
-  document.getElementById("app").innerHTML = __HTML__[route];
-  highlight();
+function redirect({ id }) {
+  window.location.href = "/documentation/" + id;
 }
 
 function highlight() {
   document.querySelectorAll("div.code").forEach((block) => {
     hljs.highlightBlock(block);
-  });
-}
-
-function changeSelectedButton({ id }) {
-  changeRoute(id);
-  document.querySelectorAll("button.classic-button").forEach((button) => {
-    if (button.id === id) {
-      button.style.color = "lightgreen";
-    } else {
-      button.style.background = "#191919";
-      button.style.color = "white";
-    }
   });
 }
 
@@ -48,6 +33,6 @@ document.querySelectorAll("button.classic-button").forEach((button) => {
   });
 
   button.addEventListener("click", () => {
-    changeSelectedButton(button);
+    redirect(button);
   });
 });

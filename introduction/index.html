@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../assets/langoor_logo.png">
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@10.7.1/styles/atom-one-dark.min.css">
+        <script src="//unpkg.com/@highlightjs/cdn-assets@10.7.1/highlight.min.js"></script>
+        <title>Langoor</title>
+    </head>
+    <body>
+        <div class="header">
+            <img src="../assets/langoor_logo_big.png">
+            <h1>The 21st century javascript unit testing framework.</h1>
+        </div>
+        <div class="actual-content" id="actual-content">
+            <div class="button-list" id="button-list">
+                <button class="classic-button" id="introduction">Introduction</button>
+                <button class="classic-button" id="usage">Usage</button>
+                <button class="classic-button" id="configuration">Configuration</button>
+                <button class="classic-button" id="langoor-logs">Langoor Logs</button>
+            </div>
+            <div class="divider-line"></div>
+            <div class="app" id="app">
+                <div class="introduction-docs">
+                    <h1>
+                        Introduction
+                    </h1>
+                    <div class="heading-break"></div>
+                    <h2>
+                        • What is Langoor?
+                    </h2>
+                    <div>
+                        <p style="margin-top: 10px;">
+                            Langoor is a javascript unit testing framework that focuses on error rendering and performance.
+                        </p>
+                    </div>
+                    <h2 style="margin-top: 10px;">
+                        • Installation
+                    </h2>
+                    <div class="introduction-installation">
+                        <p style="margin-top: 10px;">
+                            Installing langoor with
+                            <a href="https://www.npmjs.com/package/langoor" class="redirect">npm</a>
+                        </p>
+                        <div class="code bash">
+                            <p>
+                                npm install --save-dev langoor
+                            </p>
+                        </div>
+                        <p style="margin-top: 10px;">
+                            or with
+                            <a href="https://yarnpkg.com/package/langoor" class="redirect">yarn</a>
+                        </p>
+                        <div class="code bash">
+                            <p>
+                                yarn add --dev langoor
+                            </p>
+                        </div>
+                    </div>
+                    <h2 style="margin-top: 10px;">
+                        • Getting Started
+                    </h2>
+                    <p style="margin-top: 10px;">
+                        Start by making a file called
+                        <a class="block">
+                            sum.js
+                        </a>
+                    </p>
+                    <div class="code javascript">
+                        <p>
+                            function sum(a, b){
+                        </p>
+                        <p>
+                            &nbsp;&nbsp;return a + b;
+                        </p>
+                        <p>
+                            }
+                        </p>
+                        <p>
+                            &nbsp;
+                        </p>
+                        <p>
+                            module.exports = sum;
+                        </p>
+                    </div>
+                    <p style="margin-top: 10px;">
+                        Then, create a file called
+                        <a class="block">
+                            sum.test.js
+                        </a>
+                    </p>
+                    <div class="code javascript">
+                        <p>
+                            const sum = require('./sum');
+                        </p>
+                        <p>
+                            &nbsp;
+                        </p>
+                        <p>
+                            test("sum of 2 + 2 = 4", () => {
+                        </p>
+                        <p>
+                            &nbsp;&nbsp;hope(sum(2, 2)).toBe(4);
+                        </p>
+                        <p>
+                            });
+                        </p>
+                    </div>
+                    <p style="margin-top: 10px;">
+                        Then, just run this in your console!
+                    </p>
+                    <div class="code bash">
+                        <p>
+                            # in your root folder
+                        </p>
+                        <p>
+                            langoor
+                        </p>
+                    </div>
+                    <p style="margin-top: 10px;">
+                        Output:
+                    </p>
+                    <div style="background: #282c34; border-radius: 5px; padding: 10px; font-family: monospace; font-size: x-large;">
+                        <p>
+                            <a style="background: yellow; color: black;">
+                                &nbsp;LOADING
+                            </a>
+                            &nbsp;../sum.test.js
+                        </p>
+                        <p>
+                            <a style="background: lightgreen; color: black;">
+                                &nbsp;PASS
+                            </a>
+                            <a style="color: lightgreen;">
+                                &nbsp;sum of 2 + 2 = 4
+                            </a>
+                            <a style="color: gray;">
+                                (0ms)
+                            </a>
+                        </p>
+                        <p>
+                            &nbsp;
+                        </p>
+                        <p>
+                            <a style="background: #4DA8DA; color: black;">
+                                &nbsp;Suites
+                            </a>
+                            <a style="color: lightgreen;">
+                                &nbsp;1 passed
+                            </a>
+                            |
+                            <a style="color: red;">
+                                0 failed
+                            </a>
+                            | 1 total
+                        </p>
+                        <p>
+                            <a style="background: #4DA8DA; color: black;">
+                                &nbsp;Tests
+                            </a>
+                            <a style="color: lightgreen;">
+                                &nbsp;1 passed
+                            </a>
+                            |
+                            <a style="color: red;">
+                                0 failed
+                            </a>
+                            | 1 total
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../script.js"></script>
+        <style>
+            #introduction {
+                color: lightgreen;
+            }
+        </style>
+    </body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../assets/langoor_logo.png">
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@10.7.1/styles/atom-one-dark.min.css">
+        <script src="//unpkg.com/@highlightjs/cdn-assets@10.7.1/highlight.min.js"></script>
+        <title>Langoor</title>
+    </head>
+    <body>
+        <div class="header">
+            <img src="../assets/langoor_logo_big.png">
+            <h1>The 21st century javascript unit testing framework.</h1>
+        </div>
+        <div class="actual-content" id="actual-content">
+            <div class="button-list" id="button-list">
+                <button class="classic-button" id="introduction">Introduction</button>
+                <button class="classic-button" id="usage">Usage</button>
+                <button class="classic-button" id="configuration">Configuration</button>
+                <button class="classic-button" id="langoor-logs">Langoor Logs</button>
+            </div>
+            <div class="divider-line"></div>
+            <div class="app" id="app">
+                <div class="usage-docs">
+                    <h1>
+                        Usage
+                    </h1>
+                    <div class="heading-break"></div>
+                    <h2>• How does langoor find your files?</h2>
+                    <div>
+                        <p style="margin-top: 10px;">
+                            Langoor finds your files via a recursive function that digs all your files ending with ".test.js".
+                        </p>
+                    </div>
+                    <h2>• How to run your file?</h2>
+                    <div>
+                        <p>Just type this in the console!</p>
+                        <div class="code bash">
+                            <p>
+                                # auto-searches files ending with ".test.js"
+                            </p>
+                            <p>langoor</p>
+                            <p>&nbsp;</p>
+                            <p>
+                                # if you wanna add additional files to the pre-existing ones
+                            </p>
+                            <p>langoor [file_path]</p>
+                        </div>
+                    </div>
+                    <h2>• File usage</h2>
+                    <div class="code javascript">
+                        <p>// PASS</p>
+                        <p>
+                            test("string `test` should be strict equal to `test`", () => {
+                        </p>
+                        <p>
+                            &nbsp;hope("test").toStrictEqual("test");
+                        </p>
+                        <p>});</p>
+                        <p>&nbsp;</p>
+                        <p>// FAIL</p>
+                        <p>
+                            test("adding 1 + 2 will give 4", () => {
+                        </p>
+                        <p>
+                            &nbsp;hope(1 + 2).toStrictEqual(4);
+                        </p>
+                        <p>});</p>
+                    </div>
+                    <img src="../assets/langoor_demo_fail.jpg" alt="FAIL DEMO" style="margin-top: 10px;">
+                    <h2>• Using Matchers</h2>
+                    <h4 style="margin-top: 10px;">
+                        <a style="background: yellow; color: black; border-radius: 4px; padding: 2px;">&nbsp;Syntax Example&nbsp;</a>
+                        <a style="background: black; color: white; border-radius: 4px; padding: 2px;">hope(received).toBe(expected)</a>
+                    </h4>
+                    <h4 style="margin-top: 10px;">
+                        <a style="background: yellow; color: black; border-radius: 4px; padding: 2px;">&nbsp;NOTE&nbsp;</a>
+                        <a>All Matchers used in the test function will only yield failed tests.</a>
+                    </h4>
+                    <h2 style="margin-top: 20px;">Checking Equality</h2>
+                    <p style="margin-top: 5px;">
+                        The most common and useful one is
+                        <a class="block">toBe</a>
+                        which uses
+                        <a class="block">Object.is</a>
+                        equality.
+                        <br>
+                        Other ones are
+                        <a class="block">toEqual</a>
+                        which uses
+                        <a class="block">==</a>
+                        to check equality, whereas
+                        <a class="block">toStrictEqual</a>
+                        uses
+                        <a class="block">===</a>
+                        .
+                    </p>
+                    <div class="code javascript">
+                        <p>// Use in a test function!!</p>
+                        <p>&nbsp;</p>
+                        <p>// toBe</p>
+                        <p>hope(":D").toBe(":D"); // pass</p>
+                        <p>hope(1).toBe("1"); // fail</p>
+                        <p>&nbsp;</p>
+                        <p>// toEqual</p>
+                        <p>hope(1).toEqual("1"); // pass</p>
+                        <p>hope(":)").toEqual("1"); // fail</p>
+                        <p>&nbsp;</p>
+                        <p>// toStrictEqual</p>
+                        <p>hope("hey").toBe("hey"); // pass</p>
+                        <p>hope(12).toBe("12"); // fail</p>
+                    </div>
+                    <h2 style="margin-top: 20px;">Checking Types</h2>
+                    <p style="margin-top: 5px;">
+                        1.
+                        <a class="block">toBeArray</a>
+                        - Check if type is array
+                        <br>
+                        2.
+                        <a class="block">toBeObject</a>
+                        - Check if type is object
+                        <br>
+                        3.
+                        <a class="block">toBeString</a>
+                        - Check if type is string
+                        <br>
+                        4.
+                        <a class="block">toBeNumber</a>
+                        - Check if type is number
+                        <br>
+                        5.
+                        <a class="block">toBeDefined</a>
+                        - Check if value is defined
+                        <br>
+                        6.
+                        <a class="block">toBeNotNull</a>
+                        - Check if value is not null
+                        <br>
+                        7.
+                        <a class="block">toBeTrue</a>
+                        - Check if type is true
+                        <br>
+                        8.
+                        <a class="block">toBeFalse</a>
+                        - Check if type is false
+                        <br>
+                    </p>
+                    <div class="code javascript">
+                        <p>// Use in a test function!!</p>
+                        <p>&nbsp;</p>
+                        <p>// toBeArray</p>
+                        <p>hope([":)", ";)"]).toBeArray(); // pass</p>
+                        <p>&nbsp;</p>
+                        <p>// toBeObject</p>
+                        <p>hope("hello!").toBeObject(); // fail</p>
+                        <p>&nbsp;</p>
+                        <p>// toBeString</p>
+                        <p>hope(1).toBeString(); // fail</p>
+                        <p>&nbsp;</p>
+                        <p>// toBeNumber</p>
+                        <p>hope(1).toBeNumber(); // pass</p>
+                        <p>&nbsp;</p>
+                        <p>// toBeDefined</p>
+                        <p>hope(1).toBeDefined(); // pass</p>
+                        <p>&nbsp;</p>
+                        <p>// toBeNotNull</p>
+                        <p>hope(null).toBeNotNull(); // fail</p>
+                        <p>&nbsp;</p>
+                        <p>// toBeTrue</p>
+                        <p>hope(true).toBeTrue(); // pass</p>
+                        <p>&nbsp;</p>
+                        <p>// toBeFalse</p>
+                        <p>hope(true).toBeFalse(); // fail</p>
+                        <p>&nbsp;</p>
+                    </div>
+                    <h2 style="margin-top: 20px;">Extra Matchers</h2>
+                    <p style="margin-top: 5px;">
+                        1.
+                        <a class="block">toThrow</a>
+                        - Input a function and check if it throws an error
+                        <br>
+                        2.
+                        <a class="block">toContainProperty</a>
+                        - Check if input (type object) contains property
+                        <br>
+                        3.
+                        <a class="block">toReturnValue</a>
+                        - Input a function and check if it returns a value
+                        <br>
+                        4.
+                        <a class="block">toRegexMatch</a>
+                        - Check if string matches with given regexp
+                        <br>
+                    </p>
+                    <div class="code javascript">
+                        <p>// Use in a test function!!</p>
+                        <p>&nbsp;</p>
+                        <p>// toThrow</p>
+                        <p>hope(() => {</p>
+                        <p>&nbsp;throw new Error("whoops!");</p>
+                        <p>}).toThrow(); // pass</p>
+                        <p>&nbsp;</p>
+                        <p>// toContainProperty</p>
+                        <p>hope({ greeting: "heya!" }).toContainProperty("greeting"); // pass</p>
+                        <p>&nbsp;</p>
+                        <p>// toReturnValue</p>
+                        <p>hope(() => {</p>
+                        <p>&nbsp;let a = 1;</p>
+                        <p>}).toReturnValue(); // fail</p>
+                        <p>&nbsp;</p>
+                        <p>// toRegexMatch</p>
+                        <p>hope("let's go!").toRegexMatch(/go/g); // pass</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../script.js"></script>
+        <style>
+            #usage {
+                color: lightgreen;
+            }
+        </style>
+    </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../assets/langoor_logo.png">
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@10.7.1/styles/atom-one-dark.min.css">
+        <script src="//unpkg.com/@highlightjs/cdn-assets@10.7.1/highlight.min.js"></script>
+        <title>Langoor</title>
+    </head>
+    <body>
+        <div class="header">
+            <img src="../assets/langoor_logo_big.png">
+            <h1>The 21st century javascript unit testing framework.</h1>
+        </div>
+        <div class="actual-content" id="actual-content">
+            <div class="button-list" id="button-list">
+                <button class="classic-button" id="introduction">Introduction</button>
+                <button class="classic-button" id="usage">Usage</button>
+                <button class="classic-button" id="configuration">Configuration</button>
+                <button class="classic-button" id="langoor-logs">Langoor Logs</button>
+            </div>
+            <div class="divider-line"></div>
+            <div class="app" id="app">
+                <div class="langoor-logs-docs">
+                    <h1>
+                        Langoor Logs
+                    </h1>
+                    <div class="heading-break"></div>
+                    <h2>• How do langoor logs work?</h2>
+                    <div>
+                        <p style="margin-top: 10px;">
+                            Langoor logs are a stylish way to log while testing with langoor.
+                            <br>
+                            Logs are displayed file-wise.
+                        </p>
+                    </div>
+                    <h2>• Syntax</h2>
+                    <div class="code javascript">
+                        <p>console.langoor(content);</p>
+                    </div>
+                    <h2>• Example</h2>
+                    <div class="code javascript">
+                        <p>
+                            test("should log `Langoor rockzzz`!", () => {
+                        </p>
+                        <p>
+                            &nbsp;console.langoor(`Langoor rockzzz`);
+                        </p>
+                        <p>});</p>
+                    </div>
+                    <img src="../assets//langoor-demo-logs.jpg" alt="Langoor Logs Demo" style="margin-top: 20px;">
+                </div>
+            </div>
+        </div>
+        <script src="../script.js"></script>
+        <style>
+            #langoor-logs {
+                color: lightgreen;
+            }
+        </style>
+    </body>
+</html>

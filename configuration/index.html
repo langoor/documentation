@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../assets/langoor_logo.png">
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@10.7.1/styles/atom-one-dark.min.css">
+        <script src="//unpkg.com/@highlightjs/cdn-assets@10.7.1/highlight.min.js"></script>
+        <title>Langoor</title>
+    </head>
+    <body>
+        <div class="header">
+            <img src="../assets/langoor_logo_big.png">
+            <h1>The 21st century javascript unit testing framework.</h1>
+        </div>
+        <div class="actual-content" id="actual-content">
+            <div class="button-list" id="button-list">
+                <button class="classic-button" id="introduction">Introduction</button>
+                <button class="classic-button" id="usage">Usage</button>
+                <button class="classic-button" id="configuration">Configuration</button>
+                <button class="classic-button" id="langoor-logs">Langoor Logs</button>
+            </div>
+            <div class="divider-line"></div>
+            <div class="app" id="app">
+                <div class="config-docs">
+                    <h1>
+                        Configuration
+                    </h1>
+                    <div class="heading-break"></div>
+                    <h2>
+                        • Where do I put the configuration of my project?
+                    </h2>
+                    <div>
+                        <p style="margin-top: 10px;">
+                            All configurations are stored in a file called
+                            <a class="block">langoor.config.js</a>
+                            in the root folder of your project.
+                        </p>
+                    </div>
+                    <h2>
+                        • Setting up
+                    </h2>
+                    <p style="margin-top: 10px;">
+                        In your
+                        <a class="block">langoor.config.js</a>
+                        file,
+                        you can ignore files as well as add additional files.
+                        <div class="code javascript">
+                            <p>module.exports = {</p>
+                            <p>&nbsp;additional: [], // Array of additionalfFiles to add to the default ".test.js" files.</p>
+                            <p>
+                                &nbsp;ignore: [], // Ignored files and folder.
+                            </p>
+                            };
+                        </p>
+                    </div>
+                </p>
+                <h2>
+                    • Adding files via console
+                </h2>
+                <p>You can add files via console like this:</p>
+                <div class="code bash">
+                    <p>langoor [file_paths]</p>
+                </div>
+                <p>For Example:</p>
+                <div class="code bash">
+                    <p>langoor ./index.js ./client/client.js</p>
+                </div>
+            </div>
+        </p>
+    </div>
+</div>
+</div>
+<script src="../script.js"></script>
+<style>
+            #configuration {
+                color: lightgreen;
+            }
+</style>
+</body>
+</html>

@@ -40,19 +40,6 @@
   font-size: large;
 }
 
-/* .header {
-  background: #36454f;
-  height: 100px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  font-family: Tahoma;
-  font-weight: 1000;
-  font-size: x-large;
-  color: whitesmoke;
-} */
-
 .header {
   background: lightgreen;
   height: 140px;
@@ -80,11 +67,12 @@
 
 .redirect,
 .block {
-  background: gray;
-  padding: 4px;
+  background: #303030;
+  padding: 3px;
   border-radius: 5px;
-  color: whitesmoke;
-  font-weight: 550;
+  color: white;
+  /* margin: 5px; */
+  font-family: monospace;
 }
 
 .code {
